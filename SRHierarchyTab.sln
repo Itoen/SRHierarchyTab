@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio for Mac
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRHierarchyTab", "SRHierarchyTab.csproj", "{0E2DC22E-1C4E-E466-3509-EBF2535B6BB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRHierarchyTab.Editor", "SRHierarchyTab.Editor.csproj", "{7E2F2449-B39A-B650-F7AA-B97B0C0CF825}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E2DC22E-1C4E-E466-3509-EBF2535B6BB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E2DC22E-1C4E-E466-3509-EBF2535B6BB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E2DC22E-1C4E-E466-3509-EBF2535B6BB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E2DC22E-1C4E-E466-3509-EBF2535B6BB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E2F2449-B39A-B650-F7AA-B97B0C0CF825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E2F2449-B39A-B650-F7AA-B97B0C0CF825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E2F2449-B39A-B650-F7AA-B97B0C0CF825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E2F2449-B39A-B650-F7AA-B97B0C0CF825}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
