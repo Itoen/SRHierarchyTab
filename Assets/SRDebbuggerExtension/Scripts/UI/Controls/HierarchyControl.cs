@@ -88,7 +88,7 @@ namespace SRHierarchyTab
             }
         }
 
-        private void Refresh ()
+        public void Refresh ()
         {
             if (this.hierarchyScrollRect.normalizedPosition.y.ApproxZero())
             {
