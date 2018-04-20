@@ -107,7 +107,7 @@ namespace SRHierarchyTab
             }
             else
             {
-                this.hierarchyPathText.text = entry.HierarchyPath.Substring(0, MaxLength);
+                this.hierarchyPathText.text = entry.HierarchyPath.Substring(0, Mathf.Min(entry.HierarchyPath.Length, MaxLength));
             }
 
             this.fullPathScrollRect.normalizedPosition = new Vector2(0, 1);

@@ -38,6 +38,7 @@ namespace SRHierarchyTab
                 if (this.filter != value)
                 {
                     this.filter = value;
+                    this.Refresh();
                 }
             }
         }
