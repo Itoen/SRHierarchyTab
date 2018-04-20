@@ -54,6 +54,11 @@ namespace SRHierarchyTab
             this.StartCoroutine(ScrollToBottom());
         }
 
+        protected override void OnEnable ()
+        {
+            this.Refresh();
+        }
+
         IEnumerator ScrollToBottom ()
         {
             yield return new WaitForEndOfFrame();
