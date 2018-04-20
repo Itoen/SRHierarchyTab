@@ -3,6 +3,7 @@
 
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using SRF;
 using SRF.UI.Layout;
 using UnityEngine;
@@ -118,6 +119,38 @@ namespace SRHierarchyTab
 
                 this.hierarchyScrollLayoutGroup.AddItem(entry);
             }
+        }
+
+        private string[] GetAllHierarchyPath ()
+        {
+            var hierarchyPathList = new List<string>();
+            var transforms = FindObjectsOfType<Transform>();
+            foreach (var transform in transforms)
+            {
+                if (transform.parent == null)
+                {
+                    hierarchyPathList.Add(transform.name);
+                    continue;
+                }
+                var path = this.GetHierarchyPath(transform);
+                hierarchyPathList.Add(path);
+            }
+
+            return hierarchyPathList.ToArray();
+        }
+
+        private string GetHierarchyPath (Transform transform)
+        {
+            var path = transform.name;
+            var parent = transform.parent;
+
+            while (parent != null)
+            {
+                path = string.Format("{0}/{1}", parent.name, path);
+                parent = parent.parent;
+            }
+
+            return path;
         }
     }
 }
