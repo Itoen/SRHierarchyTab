@@ -1,16 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class HierarchyEntry : MonoBehaviour {
+namespace SRHierarchyTab
+{
+    public class HierarchyEntry
+    {
+        private const int PreviewLength = 180;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        public string PathPreview
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(this.HierarchyPath))
+                {
+                    return "";
+                }
+                return this.HierarchyPath.Substring(0, Mathf.Min(this.HierarchyPath.Length, PreviewLength));
+            }
+        }
+
+        public string HierarchyPath
+        {
+            private set;
+            get;
+        }
+
+        public HierarchyEntry (string hierarchyPath)
+        {
+            this.HierarchyPath = hierarchyPath;
+        }
+    }
 }
