@@ -254,9 +254,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\SRDebbuggerExtension\Scripts\Data\HierarchyEntry.cs" />
     <Compile Include="Assets\SRDebbuggerExtension\Scripts\Internal\OriginalService.cs" />
-    <Compile Include="Assets\SRDebbuggerExtension\Scripts\Services\HierarchyEntry.cs" />
-    <Compile Include="Assets\SRDebbuggerExtension\Scripts\Services\HierarchyService.cs" />
     <Compile Include="Assets\SRDebbuggerExtension\Scripts\UI\Controls\HierarchyControl.cs" />
     <Compile Include="Assets\SRDebbuggerExtension\Scripts\UI\Controls\HierarchyEntryView.cs" />
     <Compile Include="Assets\SRDebbuggerExtension\Scripts\UI\Tabs\HierarchyTabController.cs" />
