@@ -97,27 +97,24 @@ namespace SRHierarchyTab
             }
 
             this.hierarchyScrollLayoutGroup.ClearItems();
+            this.hierarchyScrollLayoutGroup.SelectedItem = null;
 
-            /// @todo ヒエラルキーの取得
-            HierarchyEntry[] entries = new HierarchyEntry[0];
+            var hierarchies = this.GetAllHierarchyPath();
 
-            for (var i = 0; i < entries.Length; i++)
+            for (var i = 0; i < hierarchies.Length; i++)
             {
-                var entry = entries[i];
+                var hierarchyPath = hierarchies[i];
 
                 if (!string.IsNullOrEmpty(Filter))
                 {
-                    if (entry.HierarchyPath.IndexOf(Filter, StringComparison.OrdinalIgnoreCase) < 0)
+                    if (hierarchyPath.IndexOf(Filter, StringComparison.OrdinalIgnoreCase) < 0)
                     {
-                        if (entry == this.hierarchyScrollLayoutGroup.SelectedItem)
-                        {
-                            this.hierarchyScrollLayoutGroup.SelectedItem = null;
-                        }
                         continue;
                     }
                 }
 
-                this.hierarchyScrollLayoutGroup.AddItem(entry);
+                var hierarchyEntry = new HierarchyEntry(hierarchyPath);
+                this.hierarchyScrollLayoutGroup.AddItem(hierarchyEntry);
             }
         }
 
