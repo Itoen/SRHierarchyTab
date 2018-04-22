@@ -4,3 +4,9 @@
 
 ## How To Use
 Import Unitypackage to the imported SRDebugger project.
+
+## Lisence
+MIT
+
+## Releases
+[Release Page](/releases)
