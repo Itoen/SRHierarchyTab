@@ -9,4 +9,4 @@ Import Unitypackage to the imported SRDebugger project.
 MIT
 
 ## Releases
-[Release Page](/releases)
+[Release Page](../../releases)
