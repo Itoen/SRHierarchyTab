@@ -107,7 +107,16 @@ namespace SRHierarchyTab
             }
             else
             {
-                this.hierarchyPathText.text = entry.HierarchyPath.Substring(0, Mathf.Min(entry.HierarchyPath.Length, MaxLength));
+                var text = entry.HierarchyPath + System.Environment.NewLine
+                                + "-- Attached Components --";
+                var targetObject = GameObject.Find(entry.HierarchyPath);
+
+                foreach (var component in targetObject.GetComponents<Component>())
+                {
+                    text = text + System.Environment.NewLine + component.GetType().Name;
+                }
+
+                this.hierarchyPathText.text = text.Substring(0, Mathf.Min(text.Length, MaxLength));
             }
 
             this.fullPathScrollRect.normalizedPosition = new Vector2(0, 1);
